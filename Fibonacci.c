@@ -26,10 +26,19 @@ int main()
             t2[k] = N_thTerm[k];
         }
     }
-
-    for (int i = 0; i < 500; i++)
+    int i = 0;
+    for (i = 1; i < 500; i++)
     {
-        printf("%d", t1[i]);
+        if (t1[i] != 0 || t1[i - 1] != 0)
+        {
+            break;
+        }
+    }
+    printf("%d\n", i);
+
+    for (int j = i; j < 500; j++)
+    {
+        printf("%d", t1[j]);
     }
 
     return 0;
